@@ -1,4 +1,3 @@
-#include <iostream>
 #include <stdio.h>
 
 int main() {
@@ -13,9 +12,16 @@ int main() {
     cpu = h_cpu - (h_cpu * 0.15);
     ram = h_ram - (h_ram * 0.08);  
     mainboard = h_mainboard - (h_mainboard * 0.10);
-    
-    printf("Harga CPU setelah diskon: %.2f\n", cpu);
-    printf("Harga RAM setelah diskon: %.2f\n", ram);
-    printf("Harga Mainboard setelah diskon: %.2f\n", mainboard);
+
+    printf("\n");
+    printf("====================================================================\n");
+    printf("| No | Nama Barang      | Harga       | Diskon | Jumlah | Harga Setelah Diskon |\n");
+    printf("====================================================================\n");
+    printf("| 1  | CPU 850MHz       | %-11.2f | 15%%    | 1      | %-18.2f |\n", h_cpu, cpu);
+    printf("| 2  | RAM 128 MHz      | %-11.2f | 8%%     | 1      | %-18.2f |\n", h_ram, ram);
+    printf("| 3  | Motherboard PIII | %-11.2f | 10%%    | 1      | %-18.2f |\n", h_mainboard, mainboard);
+    printf("====================================================================\n");
+    printf("| Total |                  |             |        |        | %-18.2f |\n", cpu + ram + mainboard);
+    printf("====================================================================\n");
 
 }
